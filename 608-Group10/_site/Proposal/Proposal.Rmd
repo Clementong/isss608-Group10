@@ -28,8 +28,6 @@ Identifying common procurement needs of various public agencies could also revea
 
 ## 2.1 Literature Review 
 
-Literature Review (relevant work) 
-
 Currently GeBiz has two separate procurement analytics tools, namely GeBIZ InSIGHT and GeBIZ Management Console (GMC). GeBiz InSIGHT aims at allowing procurement officers to gain insights into the potential procurement opportunities. GeBIZ Management Console (GMC) aims at providing decision makers with visibility of public procurement. Although these tools allow insight gathering for decision making, they are aimed at public sector level. An improvement on this would be making it transparent to the suppliers as well, enabling them to gain insights on potential market opportunities. A single platform consisting analytics targeted at both supplier and public agencies would also improve the procurement efficiencies.
 
 For network data analysis, Sankey diagrams have been used to depict bipartite relationships for advertising expenses by public organisation. To overcome the issue of high number of nodes, hierarchical cluster and filtering were used to provide better visualization.  
@@ -49,7 +47,7 @@ The objective of this project is to provide suitable visualisations for users to
 
 # 4 Dataset
 
-The data set is obtained from Data.gov.sg (https://data.gov.sg/dataset/government-procurement). It contains 32,756 Singapore government procurement records from 2015 to 2021, including 7 variables, namely tender no., tender description, agency, award date, tender detail status, supplier name, and awarded amount.  
+The data set is obtained from [Data.gov.sg](https://data.gov.sg/dataset/government-procurement). It contains 32,756 Singapore government procurement records from 2015 to 2021, including 7 variables, namely tender no., tender description, agency, award date, tender detail status, supplier name, and awarded amount.  
 
 # 5 Approach 
 
@@ -88,19 +86,19 @@ Exploratory Data Analysis (EDA) is a crucial step of the process for the section
 
 For EDA, the user would be able to view  
 
-* **(a)** a line chart showing the award amount of selected ministry and agency over the years 
+**(a)** a line chart showing the award amount of selected ministry and agency over the years 
 
-* **(b)** a bar chart showing the award amount of the top 20 suppliers of selected ministry and agency  
+**(b)** a bar chart showing the award amount of the top 20 suppliers of selected ministry and agency  
+ 
+**(c)** a treemap that shows the key spenders at ministry and agency level 
 
-* **(c)** a treemap that shows the key spenders at ministry and agency level 
-
-* **(d)** a bar chart showing the number of tenders who are not awarded of selected ministry  
+**(d)** a bar chart showing the number of tenders who are not awarded of selected ministry  
 
 The user would be able to apply the following selection and filter criteria: 
 
-* **(a)** Ministry – filter data of agencies belonging to a particular ministry 
+**(a)** Ministry – filter data of agencies belonging to a particular ministry 
 
-* **(b)** Agency – filter data belonging to a particular agency 
+**(b)** Agency – filter data belonging to a particular agency 
 
 ![Sketch Exploratory Analysis View](./images/sketchEDA.png)
 
@@ -112,21 +110,20 @@ Often a times, network analysis is applied to understand social structures. In t
 
 As each record pertains to a tender job between an agency and a supplier, there exist an interaction between these entities which makes it suitable for some level of network analysis. In this case, our team can understand the more influential nodes and study its structure.  For network analysis, the user would be able to view  
 
-* **(a)** a Sankey diagram showing flows of award amounts from agencies to suppliers, and 
+**(a)** a Sankey diagram showing flows of award amounts from agencies to suppliers, and 
 
-* **(b)**  a bipartite network chart of agencies and suppliers 
+**(b)**  a bipartite network chart of agencies and suppliers 
 
 The user would be able to apply the following selection and filter criteria: 
 
-* **(c)**  Ministry – filter data of agencies belonging to a particular ministry 
+**(c)**  Ministry – filter data of agencies belonging to a particular ministry 
 
-* **(d)**  Agency – filter data belonging to a particular agency 
+**(d)**  Agency – filter data belonging to a particular agency 
 
-* **(e)**  Top Suppliers – filter data belonging to the top input number of suppliers 
+**(e)**  Top Suppliers – filter data belonging to the top input number of suppliers 
+**(f)**  Award Period – filter data based on a range of award dates 
 
-* **(f)**  Award Period – filter data based on a range of award dates 
-
-* **(g)**  Award Amount – filter data based on a range of award amounts 
+**(g)**  Award Amount – filter data based on a range of award amounts 
 
 ![Sketch Network Analysis View](./images/sketchNetwork.png)
 
@@ -149,7 +146,7 @@ The sketch of dashboard is as seen below:
 
 ![Sketch Text Analysis View](./images/sketchText.png)
 
- For example, users will be able to filter for:
+For example, users will be able to filter for:
 1. A topic (e.g. "Product Support")
 2. Agency (e.g. "Ministry of Education")
 3. An award period range (e.g. 'Feb 2017 to Feb 2018')
@@ -218,20 +215,23 @@ The primary tool we will use for the project is R using RStudio. The following a
 
 The output from the project will be: 
 
-1. An interactive R Shiny dashboard for users to have an overview of government procurement nature and interactions between public sector and suppliers. The dashboard will include a user guide on how to use the data visualization functions designed  
+1. **An interactive R Shiny dashboard**: For users to have an overview of government procurement nature and interactions between public sector and suppliers. The dashboard will include a user guide on how to use the data visualization functions designed. Consisting of three tabs, namely: 
 
-2. A poster showcasing the key visualizations and summarizing the key insights of the project 
+* **Tab1**: Exploratory Data Analysis Storyboard by MIN Xiaoqi 
+* **Tab2**: Network Analysis Storyboard by Bennie YANG Nengjie 
+* **Tab3**: Text Mining Storyboard by Clement ONG Shi Qi
 
-# Team Members 
+2. A poster showcasing the key visualizations and summarizing the key insights of the project. 
 
-- Bennie YANG Nengjie 
+# 9 Team Members  
 
+- Bennie YANG Nengjie
+ 
 - Clement ONG Shi Qi 
 
-- MIN Xiaoqi 
+- MIN Xiaoqi
   
-
-# 9 References 
+# 10 References 
 
 - [Singapore Procrument Fraud Case  1 ](https://www.globalconstructionreview.com/singapore-procurement-boss-charged-million-dollar/)  
 
@@ -244,8 +244,6 @@ The output from the project will be:
 - [Government Procrument Intellegence Literature Review](https://www.dsta.gov.sg/docs/default-source/dsta-about/business-intelligence-in-government-procurement.pdf?sfvrsn=2)
 
 - [Past Use of Text Mining Techniques to study trends in procrument industry Literature Review](https://ink.library.smu.edu.sg/cgi/viewcontent.cgi?referer=&httpsredir=1&article=3913&context=sis_research )
-
-- [Group17 Report](https://wiki.smu.edu.sg/1718t3isss608/Group17_Report)
 
 - [Word Clouds in R](https://towardsdatascience.com/create-a-word-cloud-with-r-bde3e7422e8a)
 
