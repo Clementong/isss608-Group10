@@ -4,7 +4,7 @@ description: |
   My Website
 output_dir: "_site"
 navbar:
-  right:
+  left:
     - text: "Home"
       href: index.html
     - text: "Project Proposal"
