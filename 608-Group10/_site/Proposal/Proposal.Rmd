@@ -38,11 +38,11 @@ Text analytics and cluster analysis have been used to analyse the nature of publ
 
 The objective of this project is to provide suitable visualisations for users to:  
 
-* **(a)** identify key interactions between public agencies and suppliers 
+**(a)** identify key interactions between public agencies and suppliers 
 
-* **(b)** identify key suppliers that are heavily relied on by the public sector 
+**(b)** identify key suppliers that are heavily relied on by the public sector 
 
-* **(c)** identify the common nature of procurement of each public agency 
+**(c)** identify the common nature of procurement of each public agency 
 
 
 # 4 Dataset
