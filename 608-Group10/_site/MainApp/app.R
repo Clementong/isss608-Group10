@@ -636,7 +636,7 @@ ui <- dashboardPage(
                   fluidRow(
                     div(style="display: inline-block;vertical-align:top; float:left;width:100%;margin-top:10px;",
                         h2("Supplier Tender Descriptions Analysis Dashboard"),
-                        p("Through text mining methods , this dashboard aims to discover projects put out by different agencies based on their tender descriptions"),
+                        p("Through text mining methods , this dashboard aims to discover projects tendered by a specific supplier based on project tendered descriptions"),
                         hr(),
                     ),
                     div(style="display: inline-block;vertical-align:top; float:left;width:100%;margin-top:15px;",
@@ -649,8 +649,8 @@ ui <- dashboardPage(
                   ),
                   fluidRow(
                     div(style="display: inline-block;vertical-align:top; float:left;width: 100%;margin-top:25px;",
-                        h4("Tree Map Representing Suppliers with top 10 greatest amount award"),
-                        p("Notice that for different project types, there are different sets of suppliers tendering for a project. Hover over to view their Awarded Amount"),
+                        h4("Tree Map Representing Agencies with top 10 greatest amount awarded from"),
+                        p("Notice that for some suppliers they only deal with specific ministries and some tendering for only large projects"),
                         box(plotlyOutput("treemap_supplier",width='800px'), width=1000)
                     ),
                   ),hr(),

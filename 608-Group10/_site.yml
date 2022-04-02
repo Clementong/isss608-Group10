@@ -10,13 +10,8 @@ navbar:
     - text: "Project Proposal"
       href: "Proposal/Proposal.html"
     - text: "Project Main Application"
-      href: "Proposal/Proposal.html"
-    - text: "Project Final Deliverables"
-      menu:
-        - text: "Project Final Report"
-          href: "Report/Report.html"
-        - text: "Project Final Poster"
-          href: "Report/Poster.html"
+      href: "https://lostdatafinder.shinyapps.io/Compiled/"
+
           
       
 output: distill::distill_article
