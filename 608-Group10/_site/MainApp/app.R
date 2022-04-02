@@ -257,13 +257,13 @@ wordcloud2a <- function (data, size = 1, minSize = 0, gridSize = 0, fontFamily =
 ui <- dashboardPage(
   
   skin="black",
-  dashboardHeader(title = "Government Procrument", titleWidth = 250),
+  dashboardHeader(title = "SINGAPORE GOVERNMENT PROCUREMENT", titleWidth = 450),
   dashboardSidebar(
     sidebarMenu(
       width=350,
-      menuItem("ExploratoryDataAnalysis" ,tabName = "EDA", icon = icon("dashboard")),
+      menuItem("Exploratory Data Analysis" ,tabName = "EDA", icon = icon("dashboard")),
       menuItem("Network Analysis",tabName = "Network", icon = icon("globe")),
-      menuItem("TextAnalysis", tabName = "Text", icon = icon("address-card-o"))
+      menuItem("Text Analysis", tabName = "Text", icon = icon("address-card-o"))
     )
   ),
   
@@ -411,7 +411,7 @@ ui <- dashboardPage(
                             
                      ),
                      column(9,
-                            sankeyNetworkOutput("sankeyPlot"),
+                            sankeyNetworkOutput("sankeyPlot", width="100%"),
                             plotlyOutput("SupplierCustomerBar")
                      )
             ),
@@ -568,7 +568,6 @@ ui <- dashboardPage(
                 )
               )
             ),# end main agency
-            
             tabPanel(
               'Text Analysis of Tender Projects by Suppliers',
               sidebarLayout(
