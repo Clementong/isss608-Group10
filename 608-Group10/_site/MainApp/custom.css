@@ -1,0 +1,23 @@
+.main-header .logo {
+font-family: "Georgia", Times, "Times New Roman", serif;
+font-weight: bold;
+font-size: 24px;
+}
+
+
+body {
+    background-color: black;
+    color: black;
+  }
+  h2 {
+    font-family: 'Yusei Magic', sans-serif;
+  }
+  .box {
+      border-radius: 25px;
+      border-top: 3px solid #d2d6de;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 10%);
+      margin: 10px;
+    }
+  .shiny-input-container {
+    color: #474747;
+  }
