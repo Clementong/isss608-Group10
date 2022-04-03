@@ -7,7 +7,7 @@ author:
     affiliation: Github 
     affiliation_url: https://github.com/Clementong/isss608-Group10
   - name: Min Xiaoqi
-  - name: Bennie yang Nengjie 
+  - name: Bennie Yang Nengjie 
 date: "`r Sys.Date()`"
 site: distill::distill_website
 ---
