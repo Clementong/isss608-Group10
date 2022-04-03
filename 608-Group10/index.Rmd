@@ -19,7 +19,7 @@ knitr::opts_chunk$set(echo = FALSE)
 htmltools::HTML('<span>Click Here:</span><a href=attachments/UserGuidePDF.pdf> User Guide</a>')
 
 ```
-xw
+
 ```{r}
 htmltools::HTML('<span>Click Here:</span><a href=attachments/Poster.pdf> Poster</a>')
 ```
