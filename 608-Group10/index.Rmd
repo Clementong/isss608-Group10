@@ -1,16 +1,12 @@
 ---
-title: "ISSS608 Group 10"
+title: "GPExploreR: Singapore Givernment Procurment Analysis"
 description: |
-  Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects 
+  ISSS608-Group 10 Data Visualisation Group Project
 site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
 ```
 
 # Project Deliverable
@@ -18,7 +14,7 @@ knitr::opts_chunk$set(echo = FALSE)
 ```{r}
 htmltools::HTML('<ul>
                 <li><a href=attachments/UserGuidePDF.pdf> User Guide</a></li>
-                <li><a href=attachments/Poster.pdf> Poster</a></li>
+                <li><a href=attachments/PosterPDF.pdf> Poster</a></li>
                 <li><a href="https://lostdatafinder.shinyapps.io/Compiled/"> Shiny Application</a></li>
                 </ul>')
 
