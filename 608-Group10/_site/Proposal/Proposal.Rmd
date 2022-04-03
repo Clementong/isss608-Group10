@@ -1,11 +1,13 @@
 ---
 title: "Project Proposal"
 description: |
-  A Distill Article Presenting the Group's Project Proposal
+  GPExploreR: Singapore Government Procurment Analysis Project Proposal
 author:
-  - name: Group 10
+  - name: Clement Ong Shi Qi
     affiliation: Github 
     affiliation_url: https://github.com/Clementong/isss608-Group10
+  - name: Min Xiaoqi
+  - name: Bennie yang Nengjie 
 date: "`r Sys.Date()`"
 output: distill::distill_article
 ---

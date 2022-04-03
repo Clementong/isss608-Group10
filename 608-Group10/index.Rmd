@@ -1,7 +1,14 @@
 ---
-title: "GPExploreR: Singapore Givernment Procurment Analysis"
+title: "GPExploreR: Singapore Government Procurment Analysis"
 description: |
   ISSS608-Group 10 Data Visualisation Group Project
+author:
+  - name: Clement Ong Shi Qi
+    affiliation: Github 
+    affiliation_url: https://github.com/Clementong/isss608-Group10
+  - name: Min Xiaoqi
+  - name: Bennie yang Nengjie 
+date: "`r Sys.Date()`"
 site: distill::distill_website
 ---
 
