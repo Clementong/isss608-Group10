@@ -543,6 +543,7 @@ ui <- dashboardPage(
                   
                 ),
                 mainPanel(
+                  
                   fluidRow(
                     div(style="display: inline-block;vertical-align:top; float:left;width:100%;margin-top:10px;",
                         h2("Agency Tender Descriptions Analysis Dashboard"),

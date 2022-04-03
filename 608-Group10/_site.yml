@@ -1,10 +1,10 @@
 name: "608-Group10"
-title: "608-Group10 : Analysis on Government Procrument"
+title: "608-Group10 :  GPExploreR: Singapore Government Procurement Analysis"
 description: |
   My Website
 output_dir: "_site"
 navbar:
-  left:
+  right:
     - text: "Home"
       href: index.html
     - text: "Project Proposal"
