@@ -87,29 +87,29 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 
   <!--radix_placeholder_meta_tags-->
-  <title>My Website: ISSS608 Group 10</title>
+  <title>608-Group10 : Analysis on Government Procrument: ISSS608 Group 10</title>
 
-  <meta property="description" itemprop="description" content="Data Visualisation Group Project: An analysis on Government Procrument"/>
+  <meta property="description" itemprop="description" content="Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects"/>
 
 
 
   <!--  https://developers.facebook.com/docs/sharing/webmasters#markup -->
-  <meta property="og:title" content="My Website: ISSS608 Group 10"/>
+  <meta property="og:title" content="608-Group10 : Analysis on Government Procrument: ISSS608 Group 10"/>
   <meta property="og:type" content="article"/>
-  <meta property="og:description" content="Data Visualisation Group Project: An analysis on Government Procrument"/>
+  <meta property="og:description" content="Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects"/>
   <meta property="og:locale" content="en_US"/>
-  <meta property="og:site_name" content="My Website"/>
+  <meta property="og:site_name" content="608-Group10 : Analysis on Government Procrument"/>
 
   <!--  https://dev.twitter.com/cards/types/summary -->
   <meta property="twitter:card" content="summary"/>
-  <meta property="twitter:title" content="My Website: ISSS608 Group 10"/>
-  <meta property="twitter:description" content="Data Visualisation Group Project: An analysis on Government Procrument"/>
+  <meta property="twitter:title" content="608-Group10 : Analysis on Government Procrument: ISSS608 Group 10"/>
+  <meta property="twitter:description" content="Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects"/>
 
   <!--/radix_placeholder_meta_tags-->
   <!--radix_placeholder_rmarkdown_metadata-->
 
   <script type="text/json" id="radix-rmarkdown-metadata">
-  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["ISSS608 Group 10"]},{"type":"character","attributes":{},"value":["Data Visualisation Group Project: An analysis on Government Procrument \n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
+  {"type":"list","attributes":{"names":{"type":"character","attributes":{},"value":["title","description","site"]}},"value":[{"type":"character","attributes":{},"value":["ISSS608 Group 10"]},{"type":"character","attributes":{},"value":["Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects \n"]},{"type":"character","attributes":{},"value":["distill::distill_website"]}]}
   </script>
   <!--/radix_placeholder_rmarkdown_metadata-->
   <!--radix_placeholder_navigation_in_header-->
@@ -2057,7 +2057,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <!--radix_placeholder_front_matter-->
 
 <script id="distill-front-matter" type="text/json">
-{"title":"ISSS608 Group 10","description":"Data Visualisation Group Project: An analysis on Government Procrument","authors":[]}
+{"title":"ISSS608 Group 10","description":"Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects","authors":[]}
 </script>
 
 <!--/radix_placeholder_front_matter-->
@@ -2065,7 +2065,7 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <header class="header header--fixed" role="banner">
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
-<a href="index.html" class="title">My Website</a>
+<a href="index.html" class="title">608-Group10 : Analysis on Government Procrument</a>
 <a href="index.html">Home</a>
 <a href="Proposal/Proposal.html">Project Proposal</a>
 <a href="https://lostdatafinder.shinyapps.io/Compiled/">Project Main Application</a>
@@ -2083,11 +2083,34 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <h1>ISSS608 Group 10</h1>
 <!--radix_placeholder_categories-->
 <!--/radix_placeholder_categories-->
-<p><p>Data Visualisation Group Project: An analysis on Government Procrument</p></p>
+<p><p>Data Visualisation Group Project: GPExploreR, a Dashboard representing government procurement projects</p></p>
 </div>
 
 
 <div class="d-article">
+<h1 id="project-introduction">Project Introduction</h1>
+<p><img src="images/dashboard_overview.png" alt="Dashboard Overview" /> In recent years, there have been high profile cases of public sector procurement fraud and corruption in Singapore. Singapore public sector procurement is mainly done via GeBIZ, an e-procurement portal where public agencies publish invitations for quotations and tenders. For public sector procurement, there is a need to identify areas where there is possible over-reliance on a particular supplier. Such over-reliance could point to risks or possible irregularities that would need to be investigated.​</p>
+<p>Currently GeBiz has two separate procurement analytics tools, namely GeBIZ InSIGHT and GeBIZ Management Console (GMC). GeBiz InSIGHT aims at allowing procurement officers to gain insights into the potential procurement opportunities. GeBIZ Management Console (GMC) aims at providing decision makers with visibility of public procurement. Although these tools allow insight gathering for decision making, they are aimed at public sector level. An improvement on this would be making it transparent to the suppliers as well, enabling them to gain insights on potential market opportunities. A single platform consisting of analytics targeted at both supplier and public agencies would also improve the procurement efficiency.​</p>
+<p><strong>The objective of this project is to provide suitable visualizations for users to:​</strong></p>
+<ul>
+<li><strong>(a) Exploratory Data Analysis Component:</strong> Conduct exploratory data analysis to gain overall understanding of the procurement pattern of both awarded and un-awarded tenders at ministry or agency levels​</li>
+</ul>
+<figure>
+<img src="images/eda_db.png" alt="Exploratory Data Analysis Overview" /><figcaption aria-hidden="true">Exploratory Data Analysis Overview</figcaption>
+</figure>
+<ul>
+<li><strong>(b) Network Analysis Component:</strong> Network analysis to identify the key interactions between public agencies and suppliers, and to identify key suppliers that are heavily relied on by the public sector​</li>
+</ul>
+<figure>
+<img src="images/network_db.png" alt="Network Analysis Overview" /><figcaption aria-hidden="true">Network Analysis Overview</figcaption>
+</figure>
+<ul>
+<li><strong>(c) Text Analysis Component :</strong> Text mining through word cloud and frequency analysis to identify the common nature of procurement by specific public agency and supplier. Topic modelling was also used to study the salient terms and identify project types from tender description. ​</li>
+</ul>
+<figure>
+<img src="images/text_db.png" alt="Text Analysis Overview" /><figcaption aria-hidden="true">Text Analysis Overview</figcaption>
+</figure>
+<p>You may visit our project proposal to get an insightful overview.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->

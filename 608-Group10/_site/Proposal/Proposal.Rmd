@@ -177,6 +177,32 @@ To prepare the data for text visualization, we will need to transform the string
 
 4. It would be good practice to apply stemming. Stemming is the process of finding the root word which can aid in the pre-processing process like the formation of document term frequency matrix. The reason for this is that stemming removes the derivation and inflectional affixes of words tat can help to improve the performance of models. 
 
+## 5.3.3 Text Analysis: Updated Sketch
+
+The updated text mining sketch includes the creation of three new tabs. The three newly created tabs are : 
+
+- A Agency View : Tender Projects by Agency
+    + Purpose For this dashboard, users will be to investigate the agency tender projects – reflecting their needs by specific time periods and in specific project types. As such, it serve for users that can investigate the change in agency needs over time and allow users (government agencies) to understand changing needs of the different ministries​
+
+
+- A Supplier View : Tender Projects by Supplier 
+    + ​The insights from this dashboard would be vastly different from the tender projects by agency. The reason is because, being able to filter by supplier, the analysis would be viewing the kinds of projects done by specific supplier by specific date range. Users can view the kinds of projects through word cloud frequency, agencies suppliers have worked with before and their respective award number of different tenders and the raw data view. This will allow for drill down to the nature of a particular supplier. For example, agencies might be looking to work with a supplier from the list of suppliers they have never worked with before. If the supplier is listed in the filter, the user can filter for the supplier and view those details which will help guide their decision. It will help them decide if the supplier deals in the same area of projects and if it is suitable for their project needs. ​
+
+
+- A Topic Model view : Topic Modelling of Tender Description (keywords by LDA)
+    + The point of this dashboard is for a transparent visualization on how project types are named. This will help in cohesive decisions on what the different project areas are (an unsupervised data driven approach to identify topic areas). ​
+
+![Updated Sketch Agency view](./images/sketchTextAgency.png)
+
+
+![Updated Sketch Supplier view](./images/sketchTextSupplier.png)
+
+
+![Updated Sketch Topic Model view](./images/sketchTextLDA.png)
+
+
+
+
 # 6 Team Timeline 
 
 ![Team Project Timeline](./images/timeline.png)

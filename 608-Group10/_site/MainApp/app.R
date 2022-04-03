@@ -257,10 +257,11 @@ wordcloud2a <- function (data, size = 1, minSize = 0, gridSize = 0, fontFamily =
 ui <- dashboardPage(
   
   skin="black",
-  dashboardHeader(title = "SINGAPORE GOVERNMENT PROCUREMENT", titleWidth = 450),
+  dashboardHeader(title = "GPExploreR:Singapore Government Procurement Analysis", titleWidth = 650),
   dashboardSidebar(
     sidebarMenu(
       width=350,
+      menuItem("Overview" ,tabName = "Intro", icon = icon("book")),
       menuItem("Exploratory Data Analysis" ,tabName = "EDA", icon = icon("dashboard")),
       menuItem("Network Analysis",tabName = "Network", icon = icon("globe")),
       menuItem("Text Analysis", tabName = "Text", icon = icon("address-card-o"))
@@ -272,11 +273,20 @@ ui <- dashboardPage(
     
     tabItems(
       tabItem(
+        tabName = 'Intro',
+        titlePanel("Overview"),
+        tabsetPanel(
+          tabPanel("About the project",
+                   fluidRow(column(6,htmlOutput("about_proj"))))
+        )
+      ),
+      
+      tabItem(
         tabName = 'EDA',
         titlePanel("Exploratory Data Analysis"),
         tabsetPanel(
           tabPanel("Procurement Amount Overview", 
-                   d3tree2Output("treemap_eda")),
+                   plotOutput("treemap_eda")),
           
           tabPanel("Procurement Pattern",
                    sidebarLayout(
@@ -702,33 +712,90 @@ ui <- dashboardPage(
 # Define server logic required to draw a histogram
 server <- function(input, output,session) {
   
+  #intro
+  #1.0 Overview
+  
+  output$'about_proj' = renderUI(
+    tagList(
+      tags$p("In recent years, there have been high profile cases of public sector 
+              procurement fraud and corruption in Singapore, such as that involving 
+              Mr Henry Foo Yung Thye, the former Deputy Group Director at the Land 
+              Transport Authority (LTA). In this case, various contractors were found 
+              to have provided inducements to Mr Foo to advance their business interests 
+              with LTA."
+      ),
+      tags$p("In another case of procurement fraud, a couple cheated the Ministry of 
+             Home Affairs into awarding them a contract. The couple submitted fictitious 
+             bids to ensure that their bids were always lowest and selected by MHA."
+      ),
+      tags$p("Singapore public sector procurement is mainly done via GeBIZ, an 
+              e-procurement portal where public agencies publish invitations for quotations 
+              and tenders. "
+      ),
+      tags$p("For public sector procurement, there is a need to identify areas where 
+              there is possible over-reliance on a particular supplier. Such 
+              over-reliance could point to risks or possible irregularities that would 
+              need to be investigated. "
+      ),
+      tags$p("Currently GeBiz has two separate procurement analytics tools, namely GeBIZ 
+              InSIGHT and GeBIZ Management Console (GMC). GeBiz InSIGHT aims at allowing 
+              procurement officers to gain insights into the potential procurement opportunities. 
+              GeBIZ Management Console (GMC) aims at providing decision makers with visibility 
+              of public procurement. Although these tools allow insight gathering for decision making, 
+              they are aimed at public sector level. An improvement on this would be making 
+              it transparent to the suppliers as well, enabling them to gain insights on 
+              potential market opportunities. A single platform consisting of analytics 
+              targeted at both supplier and public agencies would also improve the p
+              rocurement efficiencies."
+      ),
+      tags$p("The objective of this project is to provide suitable visualisations for users to: "
+      ),
+      tags$ul(
+        tags$li("Conduct exploratory data analysis to gain overall understanding of the 
+                procurement pattern of both awarded and unawarded tenders at ministry 
+                or agency levels"), 
+        tags$li("Network analysis to identify the key interactions between public agencies
+                  and suppliers, and to indentify key suppliers that are heavily relied on by 
+                  the public sector"), 
+        tags$li("Text mining through word cloud and frequency analysis to identify 
+              the common nature of procurement of each public agency. Topic modelling 
+              was also used to study the salient terms and identify project types 
+              from tender description. ")
+      )
+    )
+    
+  )
+  
+  
   # EDA Analysis Output
   
   # treemap
-  output$treemap_eda <- renderD3tree2({
-    govprocurem_tree <- govprocurem %>%
-      group_by(`ministry`, `agency`) %>%
-      summarise(num_of_orders = n(), awarded_amount = sum(awarded_amt/1000000))%>%
-      ungroup()
-    
-    # replace the "&" in agency entries to avoid xmlParseEntityRef: no name error
-    govprocurem_tree$agency = gsub("[&]","and",govprocurem_tree$agency)
-    
-    d3tree2(treemap(govprocurem_tree,
-                    index=c("ministry","agency"),
-                    vSize="num_of_orders",
-                    vColor="awarded_amount",
-                    type="value",
-                    palette = "Blues",
-                    bg.labels=c("white"),
-                    title = "Government Procurement by Ministry and Agency",
-                    title.legend = "Awarded Amount (million S$) ",
-                    fontsize.legend = 6,
-                    align.labels=list(
-                      c("center", "center"), 
-                      c("right", "bottom"))  
-    ),
-    rootname = "Government Structure" )
+  govprocurem_tree <- govprocurem %>%
+    group_by(`ministry`, `agency`) %>%
+    summarise(num_of_orders = n(), awarded_amount = sum(awarded_amt/1000000))%>%
+    ungroup()
+  
+  # replace the "&" in agency entries to avoid xmlParseEntityRef: no name error
+  govprocurem_tree$agency = gsub("[&]","and",govprocurem_tree$agency)
+  
+  output$treemap_eda <- renderPlot({
+    treemap(govprocurem_tree,
+            index=c("ministry","agency"),
+            vSize="num_of_orders",
+            vColor="awarded_amount",
+            type="value",
+            sortID = "awarded_amount",
+            palette = "Blues",
+            bg.labels=c("white"),
+            title = "Government Procurement by Ministry and Agency",
+            title.legend = "Awarded Amount (million S$) ",
+            fontsize.legend = 12,
+            fontsize.title = 14,
+            fontsize.labels = 12,
+            align.labels=list(
+              c("center", "center"), 
+              c("right", "bottom"))  
+    )
   })
   # yearly plot
   output$linePlot <- renderPlotly({
