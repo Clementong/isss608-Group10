@@ -552,7 +552,7 @@ ui <- dashboardPage(
                     div(style="display: inline-block;vertical-align:top; float:left;width:100%;margin-top:15px;",
                         h4("Frequency Word Cloud of Tender Descriptions"),
                         p("Note: Bigger words represent high frequnecy of appearance of a word in tender description of projects. Hover over the words to see their frequency"),
-                        box(wordcloud2Output("cloud",width='800px'),width=1000),
+                        wordcloud2Output("cloud",width='800px'),
                         hr()
                     )
                     ,
