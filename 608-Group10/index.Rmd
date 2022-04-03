@@ -13,6 +13,21 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ```
 
+# Project Submissions
+
+```{r}
+htmltools::HTML('<span>Click Here:</span><a href=attachments/UserGuidePDF.pdf> User Guide</a>')
+
+```
+xw
+```{r}
+htmltools::HTML('<span>Click Here:</span><a href=attachments/Poster.pdf> Poster</a>')
+```
+
+```{r}
+htmltools::HTML('<span>Click Here:</span><a href="https://lostdatafinder.shinyapps.io/Compiled/"> Shiny Application</a>')
+```
+
 # Project Introduction 
 
 In recent years, there have been high profile cases of public sector procurement fraud and corruption in Singapore. Singapore public sector procurement is mainly done via GeBIZ, an e-procurement portal where public agencies publish invitations for quotations and tenders. For public sector procurement, there is a need to identify areas where there is possible over-reliance on a particular supplier. Such over-reliance could point to risks or possible irregularities that would need to be investigated.​
