@@ -2070,7 +2070,17 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <div class="nav-right">
 <a href="index.html">Home</a>
 <a href="Proposal/Proposal.html">Project Proposal</a>
-<a href="https://lostdatafinder.shinyapps.io/Compiled/">Project Main Application</a>
+<div class="nav-dropdown">
+<button class="nav-dropbtn">
+Project Deliverables
+ 
+<span class="down-arrow">&#x25BE;</span>
+</button>
+<div class="nav-dropdown-content">
+<a href="https://lostdatafinder.shinyapps.io/Compiled/">Shiny Application</a>
+<a href="https://lostdatafinder.shinyapps.io/Compiled/">user_guide</a>
+</div>
+</div>
 <a href="javascript:void(0);" class="nav-toggle">&#9776;</a>
 </div>
 </nav>
@@ -2089,23 +2099,23 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <h1 id="project-introduction">Project Introduction</h1>
-<p><img src="images/dashboard_overview.png" alt="Dashboard Overview" /> In recent years, there have been high profile cases of public sector procurement fraud and corruption in Singapore. Singapore public sector procurement is mainly done via GeBIZ, an e-procurement portal where public agencies publish invitations for quotations and tenders. For public sector procurement, there is a need to identify areas where there is possible over-reliance on a particular supplier. Such over-reliance could point to risks or possible irregularities that would need to be investigated.​</p>
+<p>In recent years, there have been high profile cases of public sector procurement fraud and corruption in Singapore. Singapore public sector procurement is mainly done via GeBIZ, an e-procurement portal where public agencies publish invitations for quotations and tenders. For public sector procurement, there is a need to identify areas where there is possible over-reliance on a particular supplier. Such over-reliance could point to risks or possible irregularities that would need to be investigated.​</p>
 <p>Currently GeBiz has two separate procurement analytics tools, namely GeBIZ InSIGHT and GeBIZ Management Console (GMC). GeBiz InSIGHT aims at allowing procurement officers to gain insights into the potential procurement opportunities. GeBIZ Management Console (GMC) aims at providing decision makers with visibility of public procurement. Although these tools allow insight gathering for decision making, they are aimed at public sector level. An improvement on this would be making it transparent to the suppliers as well, enabling them to gain insights on potential market opportunities. A single platform consisting of analytics targeted at both supplier and public agencies would also improve the procurement efficiency.​</p>
 <p><strong>The objective of this project is to provide suitable visualizations for users to:​</strong></p>
 <ul>
-<li><strong>(a) Exploratory Data Analysis Component:</strong> Conduct exploratory data analysis to gain overall understanding of the procurement pattern of both awarded and un-awarded tenders at ministry or agency levels​</li>
+<li><strong>Exploratory Data Analysis Component:</strong> Conduct exploratory data analysis to gain overall understanding of the procurement pattern of both awarded and un-awarded tenders at ministry or agency levels​</li>
 </ul>
 <figure>
 <img src="images/eda_db.png" alt="Exploratory Data Analysis Overview" /><figcaption aria-hidden="true">Exploratory Data Analysis Overview</figcaption>
 </figure>
 <ul>
-<li><strong>(b) Network Analysis Component:</strong> Network analysis to identify the key interactions between public agencies and suppliers, and to identify key suppliers that are heavily relied on by the public sector​</li>
+<li><strong>Network Analysis Component:</strong> Network analysis to identify the key interactions between public agencies and suppliers, and to identify key suppliers that are heavily relied on by the public sector​</li>
 </ul>
 <figure>
 <img src="images/network_db.png" alt="Network Analysis Overview" /><figcaption aria-hidden="true">Network Analysis Overview</figcaption>
 </figure>
 <ul>
-<li><strong>(c) Text Analysis Component :</strong> Text mining through word cloud and frequency analysis to identify the common nature of procurement by specific public agency and supplier. Topic modelling was also used to study the salient terms and identify project types from tender description. ​</li>
+<li><strong>Text Analysis Component :</strong> Text mining through word cloud and frequency analysis to identify the common nature of procurement by specific public agency and supplier. Topic modelling was also used to study the salient terms and identify project types from tender description. ​</li>
 </ul>
 <figure>
 <img src="images/text_db.png" alt="Text Analysis Overview" /><figcaption aria-hidden="true">Text Analysis Overview</figcaption>
